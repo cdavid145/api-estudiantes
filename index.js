@@ -24,6 +24,11 @@ app.post('/estudiantes', (req, res) => {
     res.status(201).json({ mensaje: 'Estudiante creado', data: nuevo });
 });
 
+// Nuevo endpoint agregado en la rama secundaria
+app.get('/saludo', (req, res) => {
+    res.json({ mensaje: 'Hola desde la rama feature/nuevo-endpoint!' });
+});
+
 // Servidor escuchando en el puerto 3000
 app.listen(PORT, () => {
     console.log(`Servidor corriendo exitosamente en puerto ${PORT}`);
